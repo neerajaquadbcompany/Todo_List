@@ -8,6 +8,8 @@ module.exports = {
         colors: {
           customPurple: '#6C63FF', 
           customBlack:'#252525',
+          hoverBlue:'#5850DD',
+
         },
       },
   },

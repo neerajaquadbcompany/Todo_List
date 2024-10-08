@@ -79,7 +79,7 @@ function App() {
       <div className='container mx-auto max-w-[1000px]'>
         <h1 className={`text-3xl font-bold mb-4 text-center ${isDarkMode ? 'text-white':''}`}>To Do List</h1>
         <div className="flex mb-4 items-center">
-          <div className={`border-2 ${isDarkMode ?'border-white' :'border-customPurple'}  rounded-md p-0 flex items-center flex-grow mr-2`}>
+          <div className={`border-2 ${isDarkMode ?'border-white' :'border-customPurple'}   rounded-md p-0 flex items-center flex-grow mr-2`}>
             <input
               type="text"
               value={searchValue}
@@ -119,7 +119,7 @@ function App() {
 
           <button
             onClick={() => setIsDarkMode((prevMode) => !prevMode)}
-            className="ml-2 p-3 border-customPurple bg-customPurple text-white rounded-lg">
+            className="ml-2 p-3 border-customPurple bg-customPurple hover:bg-hoverBlue text-white rounded-lg">
             {isDarkMode ? <LuSunMedium /> : <FaRegMoon />}
           </button>
         </div>
@@ -153,12 +153,12 @@ function App() {
                   <div>
                     <button
                       onClick={() => handleEdit(todo.id, todo.text)} 
-                      className=" text-gray-300 px-2 py-1 rounded-lg mr-1">
+                      className=" text-gray-300 hover:text-blue-600 px-2 py-1 rounded-lg mr-1">
                       <MdOutlineModeEditOutline style={{ fontSize: '20px' }} />
                     </button>
                     <button
                       onClick={() => handleDelete(todo.id)}
-                      className=" text-gray-300 px-2 py-1 rounded-lg">
+                      className=" text-gray-300 px-2 py-1 hover:text-red-600 rounded-lg">
                       <GoTrash />
                     </button>
                   </div>
@@ -197,7 +197,7 @@ function App() {
         
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-blue-500 text-white rounded-full p-4 absolute bottom-2 lg:bottom-6 right-6 shadow-lg">
+          className="bg-blue-500 hover:bg-hoverBlue text-white rounded-full p-4 absolute bottom-2 lg:bottom-6 right-6 shadow-lg">
           <FaPlus />
         </button>
       </div>
